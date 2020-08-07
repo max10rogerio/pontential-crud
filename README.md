@@ -1,6 +1,26 @@
 # pontential-crud
 Potencial para um crud
 
+# Instalação
+> Via docker  
+
+Execute em seu terminal de comando: `docker-compose up`
+
+Isso vai:
+ - baixar a imagem do postgres v12 e node v12
+ - criar os bancos: `gazin`, `test`
+ - Instalar as depedências do projeto
+ - executar as migrations nos 2 bancos criados anteriormente
+ - iniciar o servidor na porta `9999`
+
+ > Manualmente
+ Para preparar o ambiente de forma manual:
+ - Instale as dependências: `yarn`
+ - Crie os bancos `gazin`, `test`
+ - No arquivo `ormconfig.ts` ajustes a configurações de conexão com seu postgres
+ - Execute o comando: `yarn prepare-db-dev`
+ - Execute o comando: `yarn prepare-db-test`
+ - Rode o servidor: `yarn dev`
 
 # Objetivo do teste
 Desenvolver uma API JSON REST na *linguagem a sua escolha*, que utilize os métodos (​GET​, ​POST​, ​PUT​,
@@ -58,15 +78,3 @@ DELETE /developers/{id}
 Codes 204 / 400
 ```
 Apaga o registro de um desenvolvedor
-
-# DIFERENCIAL PARA VAGA SENIOR -  Frontend
-UI/UX fica a critério do desenvolvedor porém deverá ser SPA (single-page
-application) e atender o consumo de todos endpoints da API 
-
-# Entrega
-A aplicação deve rodar em docker, possuir um script para geração das tabelas no banco de dados e TESTES UNITÁRIOS.
-
-Após finalizado enviar os arquivos em resposta ao e-mail com explicação de como
-configurar e/ou executar scripts necessários, ou enviar link do projeto no github com
-explicação no README
-

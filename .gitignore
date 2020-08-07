@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+build/
+tmp/
+temp/
+.idea/
+.env
+coverage
+*.log
+.vscode/launch.json
