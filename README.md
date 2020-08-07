@@ -14,7 +14,9 @@ Isso vai:
  - iniciar o servidor na porta `9999`
 
  > Manualmente
+
  Para preparar o ambiente de forma manual:
+ 
  - Instale as dependências: `yarn`
  - Crie os bancos `gazin`, `test`
  - No arquivo `ormconfig.ts` ajustes a configurações de conexão com seu postgres
